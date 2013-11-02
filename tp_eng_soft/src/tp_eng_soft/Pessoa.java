@@ -10,10 +10,37 @@ package tp_eng_soft;
  */
 public class Pessoa {
     
-    String nome;
-    char sexo;
-    int tel;
-    int RG;
-    String data_nasc;
+    private String nome;
+    private char sexo;
+    private String tel;
+    private String RG;
+    private String data_nasc;
+
+    public String getRG() {
+        return RG;
+    }
+
+    public String getData_nasc() {
+        return data_nasc;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+    
+    
+    
+    
+    
+    
+    
     
 }

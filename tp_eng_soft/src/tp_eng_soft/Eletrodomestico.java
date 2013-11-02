@@ -10,8 +10,10 @@ package tp_eng_soft;
  */
 public class Eletrodomestico {
     
-    String modelo;
-    Fabricante fabricante;
+    private int eletro_id;
+    private String modelo;
+    private Fabricante fabricante;
+    private String data_fab;
     //String defeito;
     //int qtidade;
     

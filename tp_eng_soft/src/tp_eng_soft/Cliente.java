@@ -10,10 +10,27 @@ package tp_eng_soft;
  */
 public class Cliente extends Pessoa {
     
-        int data_registro;
-        long CPF;
-        String endereço;
-        String cidade;
-        
+        private int id_func;
+        private int data_registro;
+        private String CPF;
+        private String endereço;
+        private String cidade;
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public int getData_registro() {
+        return data_registro;
+    }
+
+    public String getEndereço() {
+        return endereço;
+    }
+            
         
 }

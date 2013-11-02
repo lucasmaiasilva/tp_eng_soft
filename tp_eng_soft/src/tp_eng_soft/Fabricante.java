@@ -10,8 +10,9 @@ package tp_eng_soft;
  */
 public class Fabricante {
     
-    String nome;
-    String endereço;
-    int telefone;
+    private int fab_id;
+    private String nome;
+    private String endereço;
+    private int telefone;
     
 }
