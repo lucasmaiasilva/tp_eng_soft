@@ -8,9 +8,12 @@ package tp_eng_soft;
  *
  * @author gsnasc
  */
-public class Orcamento {
+public class Cliente extends Pessoa {
     
-    //TODO gerar relatorio
-    
-    
+        int data_registro;
+        long CPF;
+        String endereço;
+        String cidade;
+        
+        
 }

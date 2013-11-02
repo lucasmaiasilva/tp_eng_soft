@@ -6,14 +6,10 @@ package tp_eng_soft;
 
 /**
  *
- * @author lucassilva
+ * @author gsnasc
  */
-public class Pessoa {
+public class Peça {
     
     String nome;
-    char sexo;
-    int tel;
-    int RG;
-    String data_nasc;
-    
+    String fabricante;
 }

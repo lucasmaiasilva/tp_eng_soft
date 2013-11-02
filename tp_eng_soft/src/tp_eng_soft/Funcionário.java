@@ -6,14 +6,13 @@ package tp_eng_soft;
 
 /**
  *
- * @author lucassilva
+ * @author gsnasc
  */
-public class Pessoa {
+public class Funcionário extends Pessoa {
     
-    String nome;
-    char sexo;
-    int tel;
-    int RG;
-    String data_nasc;
+    long cart_trabalho;
+    String data_ingresso;
+    String cargo;
+    
     
 }

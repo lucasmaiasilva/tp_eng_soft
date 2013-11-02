@@ -6,14 +6,8 @@ package tp_eng_soft;
 
 /**
  *
- * @author lucassilva
+ * @author gsnasc
  */
-public class Pessoa {
-    
-    String nome;
-    char sexo;
-    int tel;
-    int RG;
-    String data_nasc;
+public class DataBase { //conexão com o banco de dados -- usar hibernate -- camada model
     
 }

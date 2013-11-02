@@ -6,14 +6,9 @@ package tp_eng_soft;
 
 /**
  *
- * @author lucassilva
+ * @author gsnasc
  */
-public class Pessoa {
+public class Int_graf { //Responsavel pela camada View
     
-    String nome;
-    char sexo;
-    int tel;
-    int RG;
-    String data_nasc;
     
 }
