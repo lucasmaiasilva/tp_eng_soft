@@ -17,6 +17,27 @@ public class Funcionário extends Pessoa {
     private String data_ingresso;
     private String cargo;
 
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public void setCart_trabalho(String cart_trabalho) {
+        this.cart_trabalho = cart_trabalho;
+    }
+
+    public void setData_ingresso(String data_ingresso) {
+        this.data_ingresso = data_ingresso;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    
     public int getId_func() {
         return id_func;
     }

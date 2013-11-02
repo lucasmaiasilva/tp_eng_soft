@@ -10,14 +10,31 @@ package tp_eng_soft;
  */
 public class Cliente extends Pessoa {
     
-        private int id_func;
+        private int id_cliente;
         private int data_registro;
-        private String CPF;
-        private String endereço;
+        private String cpf;
+        private String endereco;
         private String cidade;
 
+    public void setCPF(String CPF) {
+        this.cpf = CPF;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public void setData_registro(int data_registro) {
+        this.data_registro = data_registro;
+    }
+
+    public void setEndereço(String endereço) {
+        this.endereco = endereço;
+    }
+
+                
     public String getCPF() {
-        return CPF;
+        return cpf;
     }
 
     public String getCidade() {
@@ -29,7 +46,7 @@ public class Cliente extends Pessoa {
     }
 
     public String getEndereço() {
-        return endereço;
+        return endereco;
     }
             
         

@@ -11,13 +11,34 @@ package tp_eng_soft;
 public class Pessoa {
     
     private String nome;
-    private char sexo;
+    private char genero;
     private String tel;
-    private String RG;
+    private String rg;
     private String data_nasc;
 
+    public void setRG(String RG) {
+        this.rg = RG;
+    }
+
+    public void setData_nasc(String data_nasc) {
+        this.data_nasc = data_nasc;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setSexo(char sexo) {
+        this.genero = sexo;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    
     public String getRG() {
-        return RG;
+        return rg;
     }
 
     public String getData_nasc() {
@@ -29,7 +50,7 @@ public class Pessoa {
     }
 
     public char getSexo() {
-        return sexo;
+        return genero;
     }
 
     public String getTel() {
