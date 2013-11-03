@@ -8,7 +8,7 @@ package tp_eng_soft;
  *
  * @author gsnasc
  */
-public class Funcionário extends Pessoa {
+public class Funcionario extends Pessoa {
     
     private String login;
     private String senha;
