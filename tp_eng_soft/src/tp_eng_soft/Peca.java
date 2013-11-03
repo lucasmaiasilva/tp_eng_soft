@@ -14,6 +14,13 @@ public class Peca {
     private String nome;
     private String fabricante;
     private String lote;
+    private int qtdade_estoque;
+
+    public void setQtdade_estoque(int qtdade_estoque) {
+        this.qtdade_estoque = qtdade_estoque;
+    }
+    
+    
 
     public void setFabricante(String fabricante) {
         this.fabricante = fabricante;
@@ -25,6 +32,10 @@ public class Peca {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public int getQtdade_estoque() {
+        return qtdade_estoque;
     }
     
     
