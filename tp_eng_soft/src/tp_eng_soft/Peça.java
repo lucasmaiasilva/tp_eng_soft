@@ -8,7 +8,7 @@ package tp_eng_soft;
  *
  * @author gsnasc
  */
-public class Peça {
+public class Peca {
     
     private int peca_id;
     private String nome;
