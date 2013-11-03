@@ -11,7 +11,7 @@ package tp_eng_soft;
 public class Cliente extends Pessoa {
     
         private int id_cliente;
-        private int data_registro;
+        private String data_registro;
         private String cpf;
         private String endereco;
         private String cidade;
@@ -28,7 +28,7 @@ public class Cliente extends Pessoa {
         this.data_registro = data_registro;
     }
 
-    public void setEndereço(String endereço) {
+    public void setEndereco(String endereco) {
         this.endereco = endereço;
     }
 
@@ -45,7 +45,7 @@ public class Cliente extends Pessoa {
         return data_registro;
     }
 
-    public String getEndereço() {
+    public String getEndereco() {
         return endereco;
     }
             
