@@ -12,7 +12,7 @@ public class Eletrodomestico {
     
     private int id_eletro;
     private String modelo;
-    private Fabricante fabricante;
+    private Fabricante fabricante; //  acho melhor so fazer referencia ao id_Fabricante do que instanciar um novo objeto
     private String data_fab;
     private String status;
     //String defeito;
