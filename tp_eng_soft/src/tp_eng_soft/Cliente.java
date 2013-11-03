@@ -16,8 +16,8 @@ public class Cliente extends Pessoa {
         private String endereco;
         private String cidade;
 
-    public void setCPF(String CPF) {
-        this.cpf = CPF;
+    public void setCPF(String cpf) {
+        this.cpf = cpf;
     }
 
     public void setCidade(String cidade) {
@@ -29,7 +29,7 @@ public class Cliente extends Pessoa {
     }
 
     public void setEndereco(String endereco) {
-        this.endereco = endereço;
+        this.endereco = endereco;
     }
 
                 
