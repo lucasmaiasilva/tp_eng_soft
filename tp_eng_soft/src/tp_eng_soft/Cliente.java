@@ -24,7 +24,7 @@ public class Cliente extends Pessoa {
         this.cidade = cidade;
     }
 
-    public void setData_registro(int data_registro) {
+    public void setData_registro(String data_registro) {
         this.data_registro = data_registro;
     }
 
@@ -41,7 +41,7 @@ public class Cliente extends Pessoa {
         return cidade;
     }
 
-    public int getData_registro() {
+    public String getData_registro() {
         return data_registro;
     }
 
