@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.7.1)  16 NOV 2013 18:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.7.1)  16 NOV 2013 20:31
 entering extended mode
  %&-line parsing enabled.
 **doc.tex
@@ -454,81 +454,129 @@ Package caption Info: listings package is loaded.
 Package: subcaption 2008/08/31 v1.0b Adding subcaptions (AR)
 \c@subfigure=\count114
 \c@subtable=\count115
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/framed.sty
+Package: framed 2007/10/04 v 0.95: framed or shaded text with page breaks
+\fb@frw=\dimen128
+\fb@frh=\dimen129
+\FrameRule=\dimen130
+\FrameSep=\dimen131
 ) (./doc.aux)
 \openout1 = `doc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 \c@lstlisting=\count116
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
-\scratchdimen=\dimen128
+\scratchdimen=\dimen132
 \scratchbox=\box37
 \nofMPsegments=\count118
 \nofMParguments=\count119
 \everyMPshowfont=\toks26
 \MPscratchCnt=\count120
-\MPscratchDim=\dimen129
+\MPscratchDim=\dimen133
 \MPnumerator=\count121
 \everyMPtoPDFconversion=\toks27
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 47.
+LaTeX Font Info:    Try loading font information for U+msa on input line 48.
  (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 47.
+LaTeX Font Info:    Try loading font information for U+msb on input line 48.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 97.
+<pic/cronograma.jpeg, id=9, 651.18282pt x 291.33844pt>
+File: pic/cronograma.jpeg Graphic file (type jpg)
+
+<use pic/cronograma.jpeg> [2 <./pic/cronograma.jpeg>] [3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 153.
+
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
- [2] [3] [4]
-Overfull \hbox (15.02837pt too wide) in paragraph at lines 205--206
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 153.
+ [4] [5] [6] [7] [8]
+[9] [10] <pic/casos_de_uso_1.png, id=41, 1920.17375pt x 1167.36125pt>
+File: pic/casos_de_uso_1.png Graphic file (type png)
+
+<use pic/casos_de_uso_1.png> [11]
+<pic/casos_de_uso_2.png, id=46, 2023.56pt x 978.65625pt>
+File: pic/casos_de_uso_2.png Graphic file (type png)
+
+<use pic/casos_de_uso_2.png> [12 <./pic/casos_de_uso_1.png> <./pic/casos_de_uso
+_2.png>] <pic/mvc_1.png, id=52, 1167.36125pt x 978.65625pt>
+File: pic/mvc_1.png Graphic file (type png)
+
+<use pic/mvc_1.png> <pic/componentes.png, id=53, 1995.455pt x 1769.61125pt>
+File: pic/componentes.png Graphic file (type png)
+
+<use pic/componentes.png> [13 <./pic/mvc_1.png>] [14 <./pic/componentes.png>]
+<pic/classe_1.png, id=63, 2710.125pt x 1920.17375pt>
+File: pic/classe_1.png Graphic file (type png)
+ <use pic/classe_1.png>
+Overfull \hbox (15.02837pt too wide) in paragraph at lines 641--642
 []\OT1/cmr/m/n/10 Abaixo se-guem os prin-ci-pais di-a-gra-mas de sequ^encia par
 a as prin-ci-pais opera^^Xc~oes
  []
 
-[5] [6] (./doc.aux) ) 
+<pic/sequencia_1.jpeg, id=64, 527.72156pt x 274.77657pt>
+File: pic/sequencia_1.jpeg Graphic file (type jpg)
+
+<use pic/sequencia_1.jpeg>
+<pic/sequencia_2.jpeg, id=65, 524.71031pt x 283.0575pt>
+File: pic/sequencia_2.jpeg Graphic file (type jpg)
+
+<use pic/sequencia_2.jpeg> [15 <./pic/classe_1.png> <./pic/sequencia_1.jpeg>]
+<pic/pacotes.png, id=70, 2258.4375pt x 1317.92375pt>
+File: pic/pacotes.png Graphic file (type png)
+ <use pic/pacotes.png>
+<pic/atividades_1.png, id=71, 2296.58pt x 1204.5pt>
+File: pic/atividades_1.png Graphic file (type png)
+ <use pic/atividades_1.png>
+[16 <./pic/sequencia_2.jpeg> <./pic/pacotes.png>]
+<pic/atividades_2.png, id=76, 2296.58pt x 1204.5pt>
+File: pic/atividades_2.png Graphic file (type png)
+ <use pic/atividades_2.png>
+[17 <./pic/atividades_1.png> <./pic/atividades_2.png>] [18] (./doc.aux) ) 
 Here is how much of TeX's memory you used:
- 5768 strings out of 493848
- 77363 string characters out of 1152824
+ 5864 strings out of 493848
+ 79111 string characters out of 1152824
  172568 words of memory out of 3000000
- 8985 multiletter control sequences out of 15000+50000
+ 9063 multiletter control sequences out of 15000+50000
  10464 words of font info for 39 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 36i,9n,38p,718b,243s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
-exmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive
-/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1
-/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb>
-Output written on doc.pdf (6 pages, 117022 bytes).
+ 36i,9n,38p,781b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsl10.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on doc.pdf (18 pages, 748149 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
+ 108 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -20,6 +20,7 @@
 %usa pacote algoritmo
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{framed}
 
 
 
@@ -28,7 +29,7 @@
 \definecolor{claro}{gray}{0.9}
 
 %configurações do listings
-\lstset{frame=trBL, numbers=left, xleftmargin=-2pt, xrightmargin=-2pt,
+\lstset{frame=trBL, numbers=left, xleftmargin=-10pt, xrightmargin=-10pt,
 breaklines=true,basicstyle=\footnotesize\ttfamily}
 \begin{document}
 
@@ -68,10 +69,10 @@ Caso haja alguma mudança a ser feita, será realizada uma nova fase de document
 
 O cronograma abaixo aborda todo o processo necessário para o desenvolvimento do software de gerenciamento, o tempo total demandado foi de 7 semanas, onde todos elementos da equipe participaram do procedimento, composto por  etapas de análise de requisitos, projeto arquitetural, documentação, criação de diagramas UML e de cenários de uso, Implementação e testes unitários, fase esta onde todos elementos da equipe participam, testes de integração, documentação final e manutenção, período este que perdura enquanto o software for utilizado.
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/cronograma.jpeg}
+\end{figure}
 
 \section{Especificação de Requisitos}
 
@@ -89,7 +90,60 @@ Com as condição estipuladas, os desenvolvedores e projetistas definiu o projet
 
 \subsection{Elicitação de Requisitos}
 
-(Conversas aqui - usar frames)
+\begin{framed}
+
+\textbf{P}: Qual tarefa apresenta a maior dificuldade no dia a dia da empresa?
+
+\textbf{R}: Organizar os vários orçamentos, verificar se os prazos estimados serão possíveis de serem cumpridos com a mão de obra disponível e com a quantidade de peças no estoque em paralelo com os vários outros consertos que devem ser feitos, junto com isso conciliar um modelo fácil de gerenciamento de clientes onde posso ter tudo organizado e a relação eletrodoméstico e o seu dono.
+\end{framed}
+
+\begin{framed}
+
+\textbf{P}: Como é feito esse processo atualmente?
+
+\textbf{R}: O processo é feito utilizando blocos de orçamento, numerados que são arquivados em pastas por mês dentro de um grande armário de metal. Cabe realizar a pesquisa de forma manual para buscar os orçamentos e saber qual eletrodoméstico é de quem na hora de devolver e saber o que foi realizado no mesmo, que tipo de reparo foi realizado.
+\end{framed}
+
+\begin{framed}
+
+\textbf{P}: Você posui o controle do fluxo de eletrodomésticos que passam pela sua oficina?
+
+\textbf{R}: Não, nenhuma, apenas se alocar algum funcionário para fazer esse tipo de contagem de forma manual.
+\end{framed}
+
+\begin{framed}
+
+\textbf{P}: Como é feito o controle das finanças?
+
+\textbf{R}: As notas fiscais emitidas são somadas em uma calculadora de forma simples, fazendo o fechamento por mês. 
+\end{framed}
+
+\begin{framed}
+\textbf{P}: Como é feito o controle de peças no estoque?
+
+\textbf{R}: O controle é feito pelos técnicos, quando eles reparam que está faltando algo os mesmos possuem a autonomia de abrirem um chamado para pedir peças ao fabricante, mas só se o orçamento para tal conserto tiver sido autorizado pelo cliente anteriormente.
+\end{framed}
+
+\begin{framed}
+
+\textbf{P}: Como é feito o controle de quantos consertos cada técnico fez?
+
+\textbf{R}: Outra vez só se realizar a contagem de forma manual, em cada orçamento verificar quem foi o responsável por aquele conserto, mas geralmente a alocação possui uma fila simples que vai sempre para o mais desocupado, quem termina a tarefa primeiro pega o primeiro eletrodoméstico da fila e executa o seu conserto.
+\end{framed}
+
+\begin{framed}
+
+\textbf{P}: Você possui um controle de cadastro dos clientes?
+
+\textbf{R}: Não, todas informações relativas ao cliente, ficam no orçamento, caso qualquer contato seja necessário tudo está atrelado ao orçamento, o técnico só conhece o eletrodoméstico pelo número do orçamento, buscando por esse número é a única forma de ele conseguir os dados relativos do eletrodoméstico e do cliente.
+\end{framed}
+
+\begin{framed}
+
+\textbf{P}: O que você quer que o sistema faça por você?
+
+\textbf{R}: Eu espero que o sistema integre todo tipo de informação utilizada na oficina e que organize de forma sistemática cada informação sobre clientes, peças e os consertos realizados. Um controle maior de finanças seria necessário para que haja um melhor andamento da oficina e auxilie a prever quando requisitar a compra de mais mais peças. Um alerta deve ser acionado quando eu estiver com baixa de algum modelo de peça, desse modo seria possível consertar mais eletrodomésticos sem me preocupar com prazos. Poderia passar a tomar decisões baseadas em relatórios gerados pelo sistema para eu saber como a oficina realmente está financeiramente e de recursos, possibilitando o gerenciamento e otimização das tarefas a serem feitas.
+\end{framed}
 
 Analisando as necessidades descritas pelo cliente, foram levantados os seguintes requisitos funcionais para o sistema:
 
@@ -135,19 +189,391 @@ Dados os requisitos funcionais acima descritos, foram levantados também os segu
 \subsection{Especificação de Requisitos}
 
 \subsubsection{Cenários}
-(cenários aqui)
+
+\begin{framed}
+\textbf{Ator}: Funcionário, usuário do sistema
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Dados do cliente
+\item Efetuar cadastro do cliente
+\end{itemize}
+
+\textbf{Fluxo - Alternativo}: Cliente já cadastrado
+\begin{itemize}
+\item Alertar ao usuário 
+\end{itemize}
+\textbf{Pós -  Condição}: Cliente cadastrado com id único
+ 
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Cadastrar peça
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré-Condição}: Login e senha Válidos
+
+\textbf{Fluxo Normal}:
+
+\begin{itemize}
+\item Entrar dados da peça
+\item Efetuar cadastro da peça
+\end{itemize}
+\textbf{Fluxo Alternativo}: Peça já cadastrada
+
+\begin{itemize}
+\item Avisar ao funcionário e dar opção de atualizar quantidade em estoque
+\end{itemize}
+\textbf{Pós -  Condição}: Peça cadastrada com id único e quantidade de estoque atualizada
+
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Cadastrar Fabricante
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré-Condição}: Login e senha Válidos
+
+\textbf{Fluxo Normal}:
+\begin{itemize}
+\item Entrar dados do fabricante
+\item Efetuar cadastro do fabricante
+\end{itemize}
+\textbf{Fluxo Alternativo}: Fabricante já cadastrado
+\begin{itemize}
+\item Avisar ao funcionário e dar opção de atualizar dados do fabricante
+\end{itemize}
+\textbf{Pós -  Condição}: Fabricante cadastrado com id único
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Cadastrar Funcionário
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Dados do novo funcionário
+\item Efetuar cadastro do novo funcionário
+\end{itemize}
+\textbf{Fluxo - Alternativo}: Funcionário já existente 
+\begin{itemize}
+\item Alertar ao usuário que o funcionário já existe, exibir opção de alteração de dados 
+\end{itemize}
+\textbf{Pós - Condição}: O novo funcionário é incluído com id único
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Gerar Orçamento
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos, peças existentes
+\begin{itemize}
+\item Entrar dados do cliente
+\item Incluir peças a serem utilizadas e valor da mão de obra
+\item Gerar Orçamento e calcular seu valor
+\end{itemize}
+\textbf{Fluxo Alternativo}: Cliente não cadastrado
+\begin{itemize}
+\item Exibir tela para cadastro do cliente
+\end{itemize}
+\textbf{Pós - Condição}: Orçamento armazenado no banco com id único
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Gerar Nota Fiscal
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos, Cliente Existente
+\begin{itemize}
+\item Entrar dados do cliente
+\item Entrar dados do orçamento
+\item Gerar nota fiscal
+\end{itemize}
+\textbf{Fluxo Alternativo}: Orçamento não existente
+\begin{itemize}
+\item Exibir tela para criar orçamento
+\end{itemize}
+\textbf{Pós - Condição}:Exibe nota fiscal,  atualiza quantidade de peças no estoque
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Pesquisar Cliente
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com os dados do cliente 
+\item Retorna registro com dados do cliente
+\end{itemize}
+\textbf{Fluxo Alternativo}: Cliente não existente
+\begin{itemize}
+\item Exibir tela para criar novo cadastro de cliente
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados do Cliente 
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Pesquisar Funcionário
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com os dados do funcionário
+\item Retorna registro com dados do funcionário
+\end{itemize}
+\textbf{Fluxo Alternativo}: Funcionário não existente
+\begin{itemize}
+\item Exibir tela para criar novo cadastro de funcionário
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados do Funcionário
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Pesquisar Peça
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com os dados da peça
+\item Retorna registro com dados da peça
+\end{itemize}
+\textbf{Fluxo Alternativo}: Peça não existente
+\begin{itemize}
+\item Exibir tela para criar novo cadastro de peça
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados da peça
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Pesquisar Fabricante
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+
+\begin{itemize}
+\item Entrar com os dados do fabricante
+\item Retorna registro com dados ddo fabricante
+\end{itemize}
+\textbf{Fluxo Alternativo}: Fabricante não existente
+\begin{itemize}
+\item Exibir tela para criar novo cadastro de fabricante
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados do fabricante 
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Pesquisar Orçamento
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com os dados do orçamento
+\item Retorna registro com dados do orçamento
+\end{itemize}
+\textbf{Fluxo Alternativo}: Orçamento não existente
+\begin{itemize}
+\item Exibir tela para criar novo orçamento
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados do orçamento
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Pesquisar Nota Fiscal
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com os dados da nota fiscal
+\item Retorna registro com dados da nota fiscal
+\end{itemize}
+\textbf{Fluxo Alternativo}: Nota fiscal não existe
+\begin{itemize}
+\item Exibir tela para pesquisar outra nota fiscal
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados da nota fiscal
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Gerar Receita Mensal
+
+\textbf{Ator}: Administrador
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com o mês e ano desejado
+\end{itemize}
+\textbf{Fluxo Alternativo}: Data inválida
+\begin{itemize}
+\item Exibir tela para informar uma data válida
+\end{itemize}
+\textbf{Pós - Condição}: Exibir relatório com informações da receita mensal e opção para salvar
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Gerar Relatório de Peças
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com um período de data válido
+\end{itemize}
+\textbf{Fluxo Alternativo}: Data inválida
+\begin{itemize}
+\item Exibir tela para informar uma data válida
+\end{itemize}
+\textbf{Pós - Condição}: Exibir relatório com os dados de cada peça presente em estoque
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Gerar Relatório de Consertos
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com um período de data válido
+\end{itemize}
+\textbf{Fluxo Alternativo}: Data inválida
+\begin{itemize}
+\item Exibir tela para informar uma data válida
+\end{itemize}
+\textbf{Pós - Condição}: Exibir relatório baseado nas notas fiscais emitidas contendo seus dados
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Atualizar Peça
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com os dados da peça
+\item Retorna registro com dados da peça
+\item Abre janela para efetuar atualização dos dados
+\end{itemize}
+\textbf{Fluxo Alternativo}: Peça não existente
+\begin{itemize}
+\item Exibe  tela para criar novo cadastro de peça
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados da peça atualizados
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Atualizar Cliente
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com os dados do cliente 
+\item Retorna registro com dados do cliente 
+\item Abre  janela para efetuar atualização dos dados
+\end{itemize}
+\textbf{Fluxo Alternativo}: Peça não existente
+\begin{itemize}
+\item Exibe  tela para criar novo cadastro de cliente
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados do cliente atualizados
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Atualizar Fabricante 
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com os dados do fabricante
+\item Retorna registro com dados do fabricante 
+\item Abre  janela para efetuar atualização dos dados
+\end{itemize}
+\textbf{Fluxo Alternativo}: Fabricante não existente
+\begin{itemize}
+\item Exibe  tela para criar novo cadastro de fabricante
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados do fabricante atualizados
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Atualizar Funcionário
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com os dados do funcionário
+\item Retorna registro com dados do funcionário
+\item Abre  janela para efetuar atualização dos dados
+\end{itemize}
+\textbf{Fluxo Alternativo}: Funcionário não existente
+\begin{itemize}
+\item Exibe  tela para criar novo cadastro de funcionário
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados do funcionário atualizados
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Atualizar Orçamento
+
+\textbf{Ator}: Funcionário
+
+\textbf{Pré - Condição}: Login e senha válidos
+\begin{itemize}
+\item Entrar com os dados do orçamento
+\item Retorna registro com dados do orçamento
+\item Abre  janela para efetuar atualização dos dados
+\end{itemize}
+\textbf{Fluxo Alternativo}: Orçamento não existente
+\begin{itemize}
+\item Exibe  tela para criar novo orçamento
+\end{itemize}
+\textbf{Pós - Condição}: Exibe tela com dados do orçamento atualizados
+ 
+\end{framed}
+
+\begin{framed}
+\textbf{Nome}: Avisa Status 
+
+\textbf{Ator}: Sistema
+
+\textbf{Pré - Condição}: Orçamento válido e conserto autorizado
+\begin{itemize}
+\item Alterar o status do eletrodoméstico para pronto
+\item Enviar um email para o cliente avisando o status
+\end{itemize}
+
+\textbf{Fluxo Alternativo}: Peça faltante
+\begin{itemize}
+\item Adia o prazo via email
+\end{itemize}
+
+\textbf{Pós - Condição}: Cliente recebe email avisando o status do eletrodoméstico
+
+\end{framed}
 
 \subsubsection{Casos de uso}
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/casos_de_uso_1.png}
+\end{figure}
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/casos_de_uso_2.png}
+\end{figure}
 
 \subsection{Validação de Requisitos}
 
@@ -163,17 +589,17 @@ A segunda camada, a de controle, é a responsável por toda encapsulação de in
 
 Assim, temos a terceira camada, a de Dados que é a responsável por todo o mapeamento do modelo de dados para a aplicação. Com isso temos funções de farão todo o gerenciamento do banco de dados como também a recuperação dos dados. Abaixo é mostrado como a seguinte arquitetura de comporta:
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pic/mvc_1.png}
+\end{figure}
 
 Abaixo o segue o diagrama de componentes que constituem o modelo arquitetural de 3 camadas:
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/componentes.png}
+\end{figure}
 
 \section{Detalhes do Projeto}
 
@@ -193,9 +619,14 @@ Abaixo o segue o diagrama de componentes que constituem o modelo arquitetural de
 
 Abaixo seguem dois diagramas de classes. O primeiro é uma versão simplificada de relacionamento entre os objetos e a segunda uma versão mais detalhada com classes utilizadas pelo Hibernate na camada de dados.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/classe_1.png}
+\end{figure}
+
 %\begin{figure}[H]
 %\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
+%\includegraphics[width=1\textwidth]{pic/classe_2.png}
 %\end{figure}
 
 
@@ -204,28 +635,38 @@ Abaixo seguem dois diagramas de classes. O primeiro é uma versão simplificada 
 
 Abaixo seguem os principais diagramas de sequência para as principais operações de cadastro, remoção e atualização. Para abstrair de forma mais genéricas as classes envolvidas, o uso do nome Subject foi usada já que as mesmas operações são feitas para todas as classes.
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/sequencia_1.jpeg}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/sequencia_2.jpeg}
+\end{figure}
 
 \subsection{Diagrama de pacotes}
 
 Abaixo segue os pacotes utilizados na implementação, tais como aqueles criados para encapsular as classes utilizadas e das bibliotecas que farão a comunicação com o banco de dados e a criação da interface.
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/pacotes.png}
+\end{figure}
 
 \subsection{Diagrama de atividades}
 
 Abaixo os diagramas de atividades para as principais atividades realizadas. Nota-se que foram destacadas apenas as atividades mais críticas.
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/atividades_1.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/atividades_2.png}
+\end{figure}
 
 \section{Implementação:}
 
