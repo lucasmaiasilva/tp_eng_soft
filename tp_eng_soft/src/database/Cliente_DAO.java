@@ -13,9 +13,9 @@ import tp_eng_soft.Cliente;
  */
 public class Cliente_DAO {
     
-void adCliente(Cliente cliente){
+public void adCliente(Cliente cliente){
     
-Session session = HibernateUtil.getSessionFactory().openSession();
+Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 Transaction t = session.beginTransaction();
 session.save(cliente);
 t.commit();    

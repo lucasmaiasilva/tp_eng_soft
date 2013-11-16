@@ -4,12 +4,20 @@
  */
 package tp_eng_soft;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author gsnasc
  */
+@Entity
 public class Cliente extends Pessoa {
     
+    
+        @Id
+         @GeneratedValue
         private int id_cliente;
         private String data_registro;
         private String cpf;

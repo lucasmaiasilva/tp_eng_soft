@@ -4,12 +4,19 @@
  */
 package tp_eng_soft;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author lucassilva
  */
+@Entity
 public class Fabricante {
     
+    @Id
+    @GeneratedValue
     private int fab_id;
     private String nome;
     private String endereco;
