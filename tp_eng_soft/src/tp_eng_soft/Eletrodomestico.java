@@ -4,15 +4,22 @@
  */
 package tp_eng_soft;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author gsnasc
  */
+@Entity
 public class Eletrodomestico {
     
+    @Id
+    @GeneratedValue
     private int id_eletro;
     private String modelo;
-    private Fabricante fabricante; //  acho melhor so fazer referencia ao id_Fabricante do que instanciar um novo objeto
+    private int id_fabricante; //  acho melhor so fazer referencia ao id_Fabricante do que instanciar um novo objeto
     private String data_fab;
     private String status;
     //String defeito;
@@ -28,8 +35,8 @@ public class Eletrodomestico {
         return data_fab;
     }
 
-    public Fabricante getFabricante() {
-        return fabricante;
+    public int getFabricante() {
+        return id_fabricante;
     }
 
     public String getModelo() {
@@ -40,8 +47,8 @@ public class Eletrodomestico {
         this.data_fab = data_fab;
     }
 
-    public void setFabricante(Fabricante fabricante) {
-        this.fabricante = fabricante;
+    public void setFabricante(int id_fabricante) {
+        this.id_fabricante = id_fabricante;
     }
 
     public void setModelo(String modelo) {

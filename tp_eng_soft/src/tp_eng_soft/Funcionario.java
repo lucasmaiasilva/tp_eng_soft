@@ -4,12 +4,20 @@
  */
 package tp_eng_soft;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author gsnasc
  */
+
+@Entity
 public class Funcionario extends Pessoa {
     
+    @Id
+    @GeneratedValue
     private String login;
     private String senha;
     private int id_func;

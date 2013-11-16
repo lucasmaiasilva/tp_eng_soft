@@ -4,12 +4,21 @@
  */
 package tp_eng_soft;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
 /**
  *
  * @author gsnasc
  */
+@Entity
 public class Peca {
     
+    @Id
+    @GeneratedValue
     private int peca_id;
     private String nome;
     private String fabricante;

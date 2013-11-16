@@ -13,7 +13,7 @@ import org.hibernate.Transaction;
  */
 public class Peca_DAO {
     
-void adPeca(Peca peca){
+public void adPeca(Peca peca){
     
     Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction t = session.beginTransaction();
