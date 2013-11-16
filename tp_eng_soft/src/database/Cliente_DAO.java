@@ -22,7 +22,7 @@ t.commit();
  
 }    
 
-void removeCliente(Cliente cliente){
+public void removeCliente(Cliente cliente){
 
 Session session = HibernateUtil.getSessionFactory().openSession();
 Transaction t = session.beginTransaction();
@@ -31,7 +31,7 @@ t.commit();
 
 }
  
-void updateCliente(Cliente cliente){
+public void updateCliente(Cliente cliente){
     
 Session session = HibernateUtil.getSessionFactory().openSession();
 Transaction t = session.beginTransaction();

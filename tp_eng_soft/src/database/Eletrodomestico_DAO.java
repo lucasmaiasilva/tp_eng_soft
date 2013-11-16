@@ -14,7 +14,7 @@ import tp_eng_soft.Eletrodomestico;
  */
 public class Eletrodomestico_DAO {
     
-void adEletrodomestico(Eletrodomestico eletrodomestico){
+public void adEletrodomestico(Eletrodomestico eletrodomestico){
     
     Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction t = session.beginTransaction();
@@ -23,7 +23,7 @@ void adEletrodomestico(Eletrodomestico eletrodomestico){
     
 }    
 
-void removeEletrodomestico(Eletrodomestico eletrodomestico){
+public void removeEletrodomestico(Eletrodomestico eletrodomestico){
     
     Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction t = session.beginTransaction();
@@ -31,7 +31,7 @@ void removeEletrodomestico(Eletrodomestico eletrodomestico){
     t.commit();
 }
  
-void updateEletrodomestico(Eletrodomestico eletrodomestico){
+public void updateEletrodomestico(Eletrodomestico eletrodomestico){
     
     Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction t = session.beginTransaction();
