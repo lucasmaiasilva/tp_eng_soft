@@ -4,9 +4,11 @@
  */
 package database;
 
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import tp_eng_soft.Funcionario;
+
 
 /**
  *
@@ -16,29 +18,36 @@ public class Funcionario_DAO {
     
 public void adFuncionario(Funcionario funcionario){
     
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.save(funcionario);
-    t.commit();
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.persist(funcionario);
+    manager.getTransaction().commit();
+    manager.close(); 
     
 }    
 
 public void removeFuncionario(Funcionario funcionario){
     
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.delete(funcionario);
-    t.commit();
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.remove(funcionario);
+    manager.getTransaction().commit();
+    manager.close();
     
  
 }
  
 public void updateFuncionario(Funcionario funcionario){
     
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.update(funcionario);
-    t.commit();
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.merge(funcionario);
+    manager.getTransaction().commit();
+    manager.close();
+    
     
 }
     

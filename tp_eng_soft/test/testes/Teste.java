@@ -5,12 +5,9 @@ package testes;
  * and open the template in the editor.
  */
 
-import tp_eng_soft.Cliente;
-import database.Cliente_DAO;
 import database.Peca_DAO;
 import org.junit.Test;
 import org.junit.Assert.*;
-import static org.junit.Assert.assertTrue;
 import tp_eng_soft.Peca;
 /**
  *'

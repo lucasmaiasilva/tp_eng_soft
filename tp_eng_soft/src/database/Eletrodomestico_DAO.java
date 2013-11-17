@@ -3,6 +3,9 @@
  * and open the template in the editor.
  */
 package database;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import tp_eng_soft.Eletrodomestico;
@@ -16,27 +19,33 @@ public class Eletrodomestico_DAO {
     
 public void adEletrodomestico(Eletrodomestico eletrodomestico){
     
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.save(eletrodomestico);
-    t.commit();
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.persist(eletrodomestico);
+    manager.getTransaction().commit();
+    manager.close(); 
     
 }    
 
 public void removeEletrodomestico(Eletrodomestico eletrodomestico){
     
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.delete(eletrodomestico);
-    t.commit();
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.remove(eletrodomestico);
+    manager.getTransaction().commit();
+    manager.close(); 
 }
  
 public void updateEletrodomestico(Eletrodomestico eletrodomestico){
     
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.update(eletrodomestico);
-    t.commit();
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.merge(eletrodomestico);
+    manager.getTransaction().commit();
+    manager.close(); 
 }
     
 }
