@@ -3,9 +3,11 @@
  * and open the template in the editor.
  */
 package database;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import tp_eng_soft.Peca;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+
 
 /**
  *
@@ -15,28 +17,33 @@ public class Peca_DAO {
     
 public void adPeca(Peca peca){
     
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.save(peca);
-    t.commit();
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.persist(peca);
+    manager.getTransaction().commit();
+    manager.close();
     
 }    
 
 void removePeca(Peca peca){
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.delete(peca);
-    t.commit();
-    
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.remove(peca);
+    manager.getTransaction().commit();
+    manager.close();
     
  
 }
  
 void updatePeca(Peca peca){
-Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.update(peca);
-    t.commit();    
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.merge(peca);
+    manager.getTransaction().commit();
+    manager.close();    
 }
 
     

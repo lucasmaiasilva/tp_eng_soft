@@ -14,7 +14,7 @@ import tp_eng_soft.Funcionario;
  */
 public class Funcionario_DAO {
     
-void adFuncionario(Funcionario funcionario){
+public void adFuncionario(Funcionario funcionario){
     
     Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction t = session.beginTransaction();
@@ -23,7 +23,7 @@ void adFuncionario(Funcionario funcionario){
     
 }    
 
-void removeFuncionario(Funcionario funcionario){
+public void removeFuncionario(Funcionario funcionario){
     
     Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction t = session.beginTransaction();
@@ -33,7 +33,7 @@ void removeFuncionario(Funcionario funcionario){
  
 }
  
-void updateFuncionario(Funcionario funcionario){
+public void updateFuncionario(Funcionario funcionario){
     
     Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction t = session.beginTransaction();

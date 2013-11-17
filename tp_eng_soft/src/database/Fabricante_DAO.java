@@ -14,7 +14,7 @@ import tp_eng_soft.Fabricante;
  */
 public class Fabricante_DAO {
     
-void adFabricante(Fabricante fabricante){
+public void adFabricante(Fabricante fabricante){
     
     Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction t = session.beginTransaction();
@@ -24,7 +24,7 @@ void adFabricante(Fabricante fabricante){
     
 }    
 
-void removeFabricante(Fabricante fabricante){
+public void removeFabricante(Fabricante fabricante){
     
     Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction t = session.beginTransaction();
@@ -33,7 +33,7 @@ void removeFabricante(Fabricante fabricante){
     
 }
  
-void updateFabricante(Fabricante fabricante){
+public void updateFabricante(Fabricante fabricante){
     
     Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction t = session.beginTransaction();

@@ -22,10 +22,8 @@ public class Teste {
     public void teste1(){
         Peca peca = new Peca();
         Peca_DAO pe = new Peca_DAO();
-        peca.setNome("motor");
+        peca.setNome("carcaca");
         pe.adPeca(peca);
-        
-    
         
     }
     

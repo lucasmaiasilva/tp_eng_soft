@@ -16,10 +16,11 @@ import javax.persistence.Id;
 @Entity
 public class Funcionario extends Pessoa {
     
-    @Id
-    @GeneratedValue
+    
     private String login;
     private String senha;
+    @Id
+    @GeneratedValue
     private int id_func;
     private String cart_trabalho;
     private String data_ingresso;
