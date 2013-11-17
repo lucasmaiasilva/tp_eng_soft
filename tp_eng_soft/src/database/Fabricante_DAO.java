@@ -4,6 +4,9 @@
  */
 package database;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import tp_eng_soft.Fabricante;
@@ -16,29 +19,34 @@ public class Fabricante_DAO {
     
 public void adFabricante(Fabricante fabricante){
     
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.save(fabricante);
-    t.commit();
-    
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.persist(fabricante);
+    manager.getTransaction().commit();
+    manager.close(); 
     
 }    
 
 public void removeFabricante(Fabricante fabricante){
     
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.delete(fabricante);
-    t.commit();
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.remove(fabricante);
+    manager.getTransaction().commit();
+    manager.close(); 
     
 }
  
 public void updateFabricante(Fabricante fabricante){
     
-    Session session = HibernateUtil.getSessionFactory().openSession();
-    Transaction t = session.beginTransaction();
-    session.update(fabricante);
-    t.commit();
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("engsoft");
+    EntityManager manager = factory.createEntityManager();
+    manager.getTransaction().begin();
+    manager.merge(fabricante);
+    manager.getTransaction().commit();
+    manager.close(); 
     
     
 }

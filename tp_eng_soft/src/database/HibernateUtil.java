@@ -6,8 +6,9 @@
 
 package database;
 
-import org.hibernate.cfg.AnnotationConfiguration;
-import org.hibernate.SessionFactory;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 /**
  * Hibernate Utility class with a convenient method to get Session Factory
@@ -17,13 +18,16 @@ import org.hibernate.SessionFactory;
  */
 public class HibernateUtil {
 
-    private static final SessionFactory sessionFactory;
+    private static final EntityManagerFactory factory;
+    private static final EntityManager manager;
+    
     
     static {
         try {
-            // Create the SessionFactory from standard (hibernate.cfg.xml) 
-            // config file.
-            sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
+            
+            factory = Persistence.createEntityManagerFactory("engsoft");
+            manager = factory.createEntityManager();
+            
         } catch (Throwable ex) {
             // Log the exception. 
             System.err.println("Initial SessionFactory creation failed." + ex);
@@ -31,7 +35,7 @@ public class HibernateUtil {
         }
     }
     
-    public static SessionFactory getSessionFactory() {
-        return sessionFactory;
+    public static EntityManagerFactory getManager() {
+        return factory;
     }
 }
