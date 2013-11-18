@@ -15,7 +15,7 @@ import engsoft.control.Eletrodomestico;
  *
  * @author gsnasc
  */
-public class Eletrodomestico_DAO {
+public class Eletrodomestico_DAO {//Responsavel pela inserção dos atributos da classe eletrodomestico a sua respectiva tabela no banco de dados
     
 public void adEletrodomestico(Eletrodomestico eletrodomestico){
     
