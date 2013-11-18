@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.7.1)  17 NOV 2013 22:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.7.1)  17 NOV 2013 22:34
 entering extended mode
  %&-line parsing enabled.
 **doc.tex
@@ -631,7 +631,7 @@ File: pic/atividades_2.png Graphic file (type png)
 Here is how much of TeX's memory you used:
  6270 strings out of 493848
  85245 string characters out of 1152824
- 179713 words of memory out of 3000000
+ 180713 words of memory out of 3000000
  9452 multiletter control sequences out of 15000+50000
  12163 words of font info for 47 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -644,7 +644,7 @@ blic/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
 s/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pf
 b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on doc.pdf (17 pages, 983028 bytes).
+Output written on doc.pdf (17 pages, 983258 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
