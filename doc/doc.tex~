@@ -21,7 +21,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{framed}
-
+\usepackage[hmargin=2cm,vmargin=3.5cm,bmargin=2cm]{geometry}
 
 
 
@@ -89,6 +89,8 @@ A presença de um sistema que possa agregar todas essas funcionalidades citadas 
 Com as condição estipuladas, os desenvolvedores e projetistas definiu o projeto como viável, sendo necessário não mais que 4 desenvolvedores para a implementação do software sendo que as tecnologias utilizadas serão de total liberdade de escolha dos desenvolvedores sendo comentadas aqui posteriormente.
 
 \subsection{Elicitação de Requisitos}
+
+Para o levantamento de requisitos foi feito através de entrevistas feitas entre desenvolvedores e o cliente. Considerando suas necessidades, foram listados também os requisitos fundamentais ao sistema.
 
 \begin{framed}
 
@@ -188,7 +190,10 @@ Dados os requisitos funcionais acima descritos, foram levantados também os segu
 \end{itemize}
 \subsection{Especificação de Requisitos}
 
+A seguir estão listados todos os possíveis cenários de uso para o sistema. Em seguida os diagramas de casos de uso correspondentes, que abstraem a maioria dos cenários descritos.
+
 \subsubsection{Cenários}
+
 
 \begin{framed}
 \textbf{Ator}: Funcionário, usuário do sistema
@@ -617,17 +622,17 @@ Abaixo o segue o diagrama de componentes que constituem o modelo arquitetural de
 
 \subsection{Diagrama de Classes}
 
-Abaixo seguem dois diagramas de classes. O primeiro é uma versão simplificada de relacionamento entre os objetos e a segunda uma versão mais detalhada com classes utilizadas pelo Hibernate na camada de dados.
+Abaixo seguem dois diagramas de classes. O primeiro é uma versão simplificada de relacionamento entre os objetos e a segunda uma versão mais detalhada com classes utilizadas pelo Hibernate na camada de dados. Nota-se que na primeira versão algumas classes foram representadas como uma só (camada de Dados e Visualização).
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{pic/classe_1.png}
+\includegraphics[width=1\textwidth]{pic/classe_11.png}
 \end{figure}
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=1\textwidth]{pic/classe_2.png}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/classe_2.png}
+\end{figure}
 
 
 \subsection{Diagrama de Sequência}
@@ -688,5 +693,7 @@ Engenharia de software mostrou o quanto é importante o planejamento, tanto para
 Portanto o trabalho cumpriu satisfatoriamente seus objetivos no desenvolvimento do sistema proposto e proporcionou bastante experiência aos envolvidos.
 
 \section{Referências}
+
+
 
 \end{document}

@@ -8,7 +8,7 @@ package engsoft.control;
  *
  * @author gsnasc
  */
-public class NotaFiscal extends Orcamento { //Deriva da Classe Orcamento, que pegará os dados para gerar a nota fiscal
+public class NotaFiscal  { //Classe que gerará o documento de nota fiscal para o cliente
     
     
     

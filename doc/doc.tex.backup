@@ -21,7 +21,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{framed}
-
+\usepackage[hmargin=2cm,vmargin=3.5cm,bmargin=2cm]{geometry}
 
 
 
@@ -89,6 +89,8 @@ A presença de um sistema que possa agregar todas essas funcionalidades citadas 
 Com as condição estipuladas, os desenvolvedores e projetistas definiu o projeto como viável, sendo necessário não mais que 4 desenvolvedores para a implementação do software sendo que as tecnologias utilizadas serão de total liberdade de escolha dos desenvolvedores sendo comentadas aqui posteriormente.
 
 \subsection{Elicitação de Requisitos}
+
+Para o levantamento de requisitos foi feito através de entrevistas feitas entre desenvolvedores e o cliente. Considerando suas necessidades, foram listados também os requisitos fundamentais ao sistema.
 
 \begin{framed}
 
@@ -188,7 +190,10 @@ Dados os requisitos funcionais acima descritos, foram levantados também os segu
 \end{itemize}
 \subsection{Especificação de Requisitos}
 
+A seguir estão listados todos os possíveis cenários de uso para o sistema. Em seguida os diagramas de casos de uso correspondentes, que abstraem a maioria dos cenários descritos.
+
 \subsubsection{Cenários}
+
 
 \begin{framed}
 \textbf{Ator}: Funcionário, usuário do sistema
@@ -565,15 +570,15 @@ Dados os requisitos funcionais acima descritos, foram levantados também os segu
 
 \subsubsection{Casos de uso}
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/casos_de_uso_1.png}
+\end{figure}
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/casos_de_uso_2.png}
+\end{figure}
 
 \subsection{Validação de Requisitos}
 
@@ -589,17 +594,17 @@ A segunda camada, a de controle, é a responsável por toda encapsulação de in
 
 Assim, temos a terceira camada, a de Dados que é a responsável por todo o mapeamento do modelo de dados para a aplicação. Com isso temos funções de farão todo o gerenciamento do banco de dados como também a recuperação dos dados. Abaixo é mostrado como a seguinte arquitetura de comporta:
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pic/mvc_1.png}
+\end{figure}
 
 Abaixo o segue o diagrama de componentes que constituem o modelo arquitetural de 3 camadas:
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/componentes.png}
+\end{figure}
 
 \section{Detalhes do Projeto}
 
@@ -617,12 +622,17 @@ Abaixo o segue o diagrama de componentes que constituem o modelo arquitetural de
 
 \subsection{Diagrama de Classes}
 
-Abaixo seguem dois diagramas de classes. O primeiro é uma versão simplificada de relacionamento entre os objetos e a segunda uma versão mais detalhada com classes utilizadas pelo Hibernate na camada de dados.
+Abaixo seguem dois diagramas de classes. O primeiro é uma versão simplificada de relacionamento entre os objetos e a segunda uma versão mais detalhada com classes utilizadas pelo Hibernate na camada de dados. Nota-se que na primeira versão algumas classes foram representadas como uma só (camada de Dados e Visualização).
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/classe_11.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/classe_2.png}
+\end{figure}
 
 
 \subsection{Diagrama de Sequência}
@@ -630,28 +640,38 @@ Abaixo seguem dois diagramas de classes. O primeiro é uma versão simplificada 
 
 Abaixo seguem os principais diagramas de sequência para as principais operações de cadastro, remoção e atualização. Para abstrair de forma mais genéricas as classes envolvidas, o uso do nome Subject foi usada já que as mesmas operações são feitas para todas as classes.
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/sequencia_1.jpeg}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/sequencia_2.jpeg}
+\end{figure}
 
 \subsection{Diagrama de pacotes}
 
 Abaixo segue os pacotes utilizados na implementação, tais como aqueles criados para encapsular as classes utilizadas e das bibliotecas que farão a comunicação com o banco de dados e a criação da interface.
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/pacotes.png}
+\end{figure}
 
 \subsection{Diagrama de atividades}
 
 Abaixo os diagramas de atividades para as principais atividades realizadas. Nota-se que foram destacadas apenas as atividades mais críticas.
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.25\textwidth]{final-fight-imagem-2.jpg}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/atividades_1.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pic/atividades_2.png}
+\end{figure}
 
 \section{Implementação:}
 
